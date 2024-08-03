@@ -1,0 +1,22 @@
+-- FullbrightScript.lua
+
+-- Função para aplicar o efeito Fullbright
+local function applyFullbright()
+    -- Certifique-se de que o ambiente existe
+    local Lighting = game:GetService("Lighting")
+    
+    -- Defina propriedades que afetam a iluminação
+    Lighting.Ambient = Color3.fromRGB(255, 255, 255) -- Branca
+    Lighting.Brightness = 1 -- Aumenta o brilho
+    Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255) -- Branca para áreas externas
+    
+    -- Configure a exposição e outras configurações para um efeito Fullbright
+    Lighting.FogColor = Color3.fromRGB(255, 255, 255) -- Cor da névoa (branca para maior visibilidade)
+    Lighting.FogEnd = 100000 -- Limite máximo da névoa
+    
+    -- Se houver efeitos adicionais, como efeitos de luzes ou sombras, ajuste conforme necessário
+    -- Este é um exemplo simples; pode ser necessário ajustar mais configurações para o efeito desejado.
+end
+
+-- Aplique o efeito Fullbright
+applyFullbright()
